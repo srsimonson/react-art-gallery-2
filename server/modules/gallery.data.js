@@ -1,6 +1,5 @@
 const galleryItems = [
-    { id: 1, path: 'images/goat_small.jpg', description: 'Photo of a goat taken at Glacier National Park.', likes: 0 },
-    { id: 0, path: 'images/all_colors_smear.jpg', description: 'all | colors | smear', likes: 0 },
+    { id: 1, path: 'images/all_colors_smear.jpg', description: 'all | colors | smear', likes: 0 },
     { id: 2, path: 'images/blue_orange_x.jpg', description: 'blue | orange | x', likes: 0 },
     { id: 3, path: 'images/blue_red_smear.jpg', description: 'blue | red | smear', likes: 0 },
     { id: 4, path: 'images/green_grey_rip.jpg', description: 'green | grey | rip', likes: 0 },
