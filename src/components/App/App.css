@@ -31,3 +31,13 @@
 .container {
   padding: 20px;
 }
+
+p.resize {
+  color: green;
+  font-weight: bolder;
+  margin: 1.5px;
+}
+
+.painting {
+  border: none;
+}
