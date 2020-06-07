@@ -14,6 +14,7 @@ class App extends Component {
     this.getGallery();
   }
 
+  // Display gallery to DOM
   getGallery = () => {
     axios.get('/gallery')
     .then(response => {
@@ -31,13 +32,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Selected Works</h1>
+          <h1 className="App-title">Steven Simonson | IMPULSE MOLD MINIMIZE BLOCK (selected works) | 2006 - 2010</h1>
         </header>
         <br/>
         <GalleryList displayGallery={this.state.displayGallery}
-                     getGallery={this.getGallery}
-                     />
-        {/* <GalleryItem getGallery={this.getGallery}/> */}
+                     getGallery={this.getGallery}/>
       </div>
     );
   }

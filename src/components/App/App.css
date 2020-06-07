@@ -10,7 +10,7 @@
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .App-intro {
@@ -23,21 +23,28 @@
 }
 
 .resize {
-  height: 150px;
-  width: 150px;
+  width: 500px;
   padding: 4px;
 }
 
 .container {
-  padding: 20px;
+  /* padding: 20px; */
+  display: inline-block;
 }
 
 p.resize {
-  color: green;
   font-weight: bolder;
-  margin: 1.5px;
+  font-size: 110px;
+  margin: 0px;
+  width: 500px;
+  height: 500px;
+  text-align: center;
 }
 
 .painting {
   border: none;
+}
+
+.box {
+  padding-bottom: 50px;
 }

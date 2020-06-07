@@ -5,32 +5,21 @@ class GalleryItem extends Component {
 
     state = {
         toggleValue: true,
-        likes: this.props.item.likes
     }
 
+    // Toggle displayPainting or displayDescription
     togglePainting = () => {
         this.setState({
             toggleValue: !this.state.toggleValue
         })
-        
     }
 
-    displayLikes = () => {
-        console.log('in displayLikes');
-        this.setState({
-            likes: this.state.likes
-        })
-        console.log('hi', this.state.likes);
-    }
-
+    // PUT request to update like counter
     updateLikes = () => {
         let id = this.props.item.id;
         axios.put( `/gallery/like/${id}` )
             .then(response => {
-            console.log('this.props.item.likes', this.props.item.likes);  
-            console.log('id:', id);
               this.props.getGallery()
-                // what goes here?! The new set.state?
             })
             .catch(error => {
             alert(`Like button not working`);
@@ -40,16 +29,17 @@ class GalleryItem extends Component {
 
     render() {
         let displayPainting = <img className="resize" src={this.props.item.path} alt=''/>;
-        let displayDescription = <p className="resize">{this.props.item.description}</p>;
-        // let likes = this.state.likes
+        let displayDescription = <p className="resize"> {this.props.item.description}</p>;
+        let likes = this.props.item.likes;
+
         return (
-            <div>
+            <div className="box">
                 <button className="painting" onClick={this.togglePainting}>
                     {this.state.toggleValue ? displayPainting : displayDescription}
                 </button>  
                 <br/>
                 <button onClick={this.updateLikes}>love it!</button>
-                <p>{this.props.item.likes} people love this!</p>
+                <p>{likes === 0 ? 'No people love this :(' : `${likes} people love this!`}</p>
             </div>
         )
     }
