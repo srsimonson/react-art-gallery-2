@@ -34,7 +34,8 @@ class App extends Component {
           <h1 className="App-title">Selected Works</h1>
         </header>
         <br/>
-        <GalleryList displayGallery={this.state.displayGallery}/>
+        <GalleryList displayGallery={this.state.displayGallery}
+                     getGallery={this.getGallery}/> */}
       </div>
     );
   }

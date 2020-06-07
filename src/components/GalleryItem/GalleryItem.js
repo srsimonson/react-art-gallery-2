@@ -1,52 +1,43 @@
 import React, {Component} from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 
 class GalleryItem extends Component {
 
     state = {
-        toggleValue: true
+        toggleValue: true,
     }
 
-    // updateLikes = (item) => {
-    //     console.log('item', item);
-    //     let likes = item.likes;
-    //     console.log('in updateLikes');
-        
-    //     axios.put(`/gallery/like/${item.id}` )
-    //         .then(response => {
-    //         // this.props.displayGallery();
-    //         console.log('item.id', item.id, likes);
-    //         })
-    //         .catch(error => {
-    //         alert(`Like button not working`);
-    //         console.log('ERROR with PUT in app.js', error);
-    //         })
-    //     }
-
-    clickTest = (item) => {
-        // let item = this.props.item
-        console.log('clickTest', item.id);
-    }
-
-    handleClick = () => {
+    togglePainting = () => {
         this.setState({
             toggleValue: !this.state.toggleValue
         })
     }
 
+    updateLikes = () => {
+        let id = this.props.item.id;
+        
+        axios.put( `/gallery/like/${id}` )
+            .then(response => {
+            // this.props.getGallery()
+            })
+            .catch(error => {
+            alert(`Like button not working`);
+            console.log('ERROR with PUT in app.js', error);
+            })
+        }
+
     render() {
-        // let item = this.props.item
+        let displayPainting = <img className="resize" src={this.props.item.path} alt=''/>;
+        let displayDescription = <p className="resize">{this.props.item.description}</p>;
+
         return (
             <div>
-                <button className="painting" onClick={this.handleClick}>
-                    {this.state.toggleValue 
-                        ? <img className="resize" src={this.props.item.path}/> 
-                        : <p className="resize">{this.props.item.description}</p>}
+                <button className="painting" onClick={this.togglePainting}>
+                    {this.state.toggleValue ? displayPainting : displayDescription}
                 </button>  
                 <br/>
-                <button onClick={this.clickTest}>love it!</button>
+                <button onClick={this.updateLikes}>love it!</button>
                 <p>{this.props.item.likes} people love this!</p>
-                {/* {this.props.updateLikes} */}
             </div>
         )
     }
