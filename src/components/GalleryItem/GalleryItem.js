@@ -13,12 +13,17 @@ class GalleryItem extends Component {
         })
     }
 
+    displayLikes = () => {
+        console.log('in displayLikes');
+        // something in here about rendering to the DOM?
+    }
+
     updateLikes = () => {
         let id = this.props.item.id;
-        
         axios.put( `/gallery/like/${id}` )
             .then(response => {
-            // this.props.getGallery()
+                this.displayLikes();
+                // what goes here?!
             })
             .catch(error => {
             alert(`Like button not working`);
