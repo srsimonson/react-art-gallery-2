@@ -3,8 +3,6 @@ const router = express.Router();
 const galleryItems = require('../modules/gallery.data');
 const pool = require('../modules/pool.js');
 
-// DO NOT MODIFY THIS FILE FOR BASE MODE
-
 // PUT Route
 router.put('/like/:id', (req, res) => {
     console.log(req.params);
