@@ -23,7 +23,7 @@ class App extends Component {
       })
     })
     .catch( error => {
-      alert('Can not display gallery, please refresh your browser.');
+      alert('Can not display gallery. ERROR in GET request in app.js');
       console.log('Error with GET in App.js:', error);
     })
   }
