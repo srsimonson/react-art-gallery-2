@@ -63,9 +63,9 @@ To practice passing values through `props` in React, you will build the gallery 
 
 ### Features
 
-- [] Move the data into a database (postgresql)
-    - [] name your database `react_gallery`
-    - [] include a `database.sql` file documenting your database tables
+- [x] Move the data into a database (postgresql)
+    - [x] name your database `react_gallery`
+    - [x] include a `database.sql` file documenting your database tables
 - [] Add a form (new **component**) that allows a user to POST a new gallery item
   - [] Client side form (use absolute URL for images)
   - [] Server side route for posting an image

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+// const pool = require('./pool.js');
 
 class GalleryItem extends Component {
 
@@ -20,12 +21,12 @@ class GalleryItem extends Component {
         axios.put( `/gallery/like/${id}` )
             .then(response => {
               this.props.getGallery()
-            })
+            }) // end .then response
             .catch(error => {
             alert(`Like button not working`);
             console.log('ERROR with PUT in app.js', error);
-            })
-        }
+            }) // end catch
+        } // end updateLikes
 
     render() {
         let displayPainting = <img className="resize" src={this.props.item.path} alt=''/>;
