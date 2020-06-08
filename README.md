@@ -1,19 +1,13 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Display of artworks with like button.
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+To start project:
+- Create a database named `react_gallery` with a table named `gallery_data` per instructions in the database.sql file.
+- run npm install in the terminal.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+The project is a series of artworks. When clicking on the image it toggles between a description and an image of the work.
 
-
-npm install
-npm install pg
-
-see database
-
-test. another test. anoooother test
-
-am I in feature-database? or in master?
+The `love it!` button tallies the number of times clicked and prints below. Upon clicking, the works are reordered at random via sql query.
