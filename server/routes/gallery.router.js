@@ -20,7 +20,7 @@ router.put('/like/:id', (req, res) => {
 
 // GET Route
 router.get('/', (req, res) => {
-    let sqlQuery = `SELECT * FROM "gallery_data" ORDER BY RANDOM();`;
+    let sqlQuery = `SELECT * FROM "gallery_data" ORDER BY id ASC;`;
     pool.query(sqlQuery)                                 
     .then((result) => {                                  
         res.send(result.rows);                           
