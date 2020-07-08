@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
-// import GalleryItem from '../GalleryItem/GalleryItem';
 import axios from 'axios';
 
 class App extends Component {
@@ -33,9 +32,10 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Steven Simonson | IMPULSE MOLD MINIMIZE BLOCK (selected works) | 2006 - 2010</h1>
-          <p> REACT demo. Click on picture to toggle description.</p>
+            <p><em>click paintings to toggle description of work</em></p>
         </header>
         <br/>
+        <p></p>
         <GalleryList displayGallery={this.state.displayGallery}
                      getGallery={this.getGallery}/>
       </div>
