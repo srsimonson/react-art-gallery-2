@@ -29,7 +29,7 @@ class GalleryItem extends Component {
         } // end updateLikes
 
     render() {
-        let displayPainting = <img className="resize" src={this.props.item.path} alt=''/>;
+        let displayPainting = <img className="resize" src={this.props.item.path} alt={this.props.item.description}/>;
         let displayDescription = <p className="resize"> {this.props.item.description}</p>;
         let likes = this.props.item.likes;
 
