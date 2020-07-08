@@ -25,7 +25,7 @@ class App extends Component {
       alert('Can not display gallery. ERROR in GET request in app.js');
       console.log('Error with GET in App.js:', error);
     })
-  }
+  } // test
 
   render() {
     return (
